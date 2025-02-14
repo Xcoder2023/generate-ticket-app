@@ -81,7 +81,6 @@ const TicketConfirmation = () => {
         >
           <div className="flex flex-col justify-center items-center">
             <div className="bg-[#0E464F] text-white rounded-tl-[20px] flex w-[360px]  overflow-hidden border-r-2">
-              {/* QR Code */}
               <div className="p-4 bg-whit">
                 <QRCodeCanvas
                   value={qrValue}
@@ -91,19 +90,12 @@ const TicketConfirmation = () => {
                 />
               </div>
 
-              {/* Ticket Details */}
               <div className="p-4 flex-1">
                 <div className="flex items-center">
                   <p className="text-[28px] font-bold italic text-white">
-                    Techember Fest '25
+                  Techember Fest &apos;25
                   </p>
-                  {/* <Image
-                    src="/images/reg2.svg"
-                    alt="event logo"
-                    width={30}
-                    height={30}
-                    className="relative bottom-5 left-2"
-                  /> */}
+
                   <div className="  items-center relative  left-2 rounded-[20px]">
                     {profileImage && profileImage !== "" && (
                       <Image
@@ -145,7 +137,7 @@ const TicketConfirmation = () => {
           {/* Side Ticket */}
           <div className="bg-[#0E464F] text-white text-sm flex items-center rounded-r-[20px] border-l-2 w-full ">
             <div className=" -rotate-90 text-[12px] w-full ">
-              <p> Techember Fest '25</p>
+              <p> Techember Fest &apos;25</p>
               <p className="mt-2 text-[10px] font-bold">User Name: {name}</p>
 
               <Image
@@ -170,7 +162,7 @@ const TicketConfirmation = () => {
 
         <div className="mt-6 flex flex-col md:flex-row justify-center md:bg-[#041E23] items-center gap-5 w-full border-0  md:border md:border-[#0E464F] rounded-full">
           <button
-          title="click to download your ticket"
+            title="click to download your ticket"
             onClick={downloadTicket}
             className="p-3 rounded-md border border-[#24A0B5] text-[#24A0B5] w-full md:w-[40%] text-sm hover:underline"
             aria-label="Download Ticket"

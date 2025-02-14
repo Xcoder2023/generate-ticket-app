@@ -82,7 +82,7 @@ const Details = () => {
   };
 
   const handleNextClick = async () => {
-    let validationErrors: { [key: string]: string } = {};
+    const validationErrors: { [key: string]: string } = {};
     if (!name) validationErrors.name = "Name is required.";
     if (!email) validationErrors.email = "Email is required.";
     else if (!/\S+@\S+\.\S+/.test(email)) validationErrors.email = "Please enter a valid email.";
