@@ -31,6 +31,7 @@ const TicketSelection = () => {
 
     localStorage.setItem("selectedTicket", selectedType!);
     localStorage.setItem("ticketCount", numTickets.toString());
+    localStorage.setItem("ticketStepCompleted", "true");
 
     router.push("/details");
   };

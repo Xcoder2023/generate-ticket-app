@@ -59,7 +59,7 @@ const TicketConfirmation = () => {
     }
   };
   return (
-    <div className="max-w-2xl mx-auto text-white p-6 rounded-[20px] border border-borderColor my-6 ">
+    <div className="w-[100%] max-w-2xl mx-auto text-white p-6 rounded-[20px] border border-borderColor my-6 ">
       <div className="flex justify-between border-b-2 border-borderColor my-5">
         <div className="border-b-2 border-[#24A0B5] relative top-[2px] w-[35%]">
           <h2 className="text-xl font-bold">Ready</h2>
@@ -77,10 +77,10 @@ const TicketConfirmation = () => {
 
         <section
           ref={ticketRef}
-          className="flex w-[500px] border-2 rounded-[20px]"
+          className="flex md:w-[500px] border-2 rounded-[20px]"
         >
           <div className="flex flex-col justify-center items-center">
-            <div className="bg-[#0E464F] text-white rounded-tl-[20px] flex w-[360px]  overflow-hidden border-r-2">
+            <div className="bg-[#0E464F] text-white rounded-tl-[20px] flex md:w-[360px]  overflow-hidden border-r-2">
               <div className="p-4 bg-whit">
                 <QRCodeCanvas
                   value={qrValue}
@@ -88,19 +88,31 @@ const TicketConfirmation = () => {
                   className="bg-white p-1 rounded-[4px]"
                   aria-label="QR Code for Ticket"
                 />
+
+                <div className="md:hidden  items-center relative top-4  left-5 rig rounded-[10px]">
+                  {profileImage && profileImage !== "" && (
+                    <Image
+                      src={profileImage}
+                      alt="profile"
+                      width={30}
+                      height={30}
+                      className="rounded-[10px]"
+                    />
+                  )}
+                </div>
               </div>
 
               <div className="p-4 flex-1">
                 <div className="flex items-center">
-                  <p className="text-[28px] font-bold italic text-white">
-                  Techember Fest &apos;25
+                  <p className="md:text-[28px] font-bold italic text-white">
+                    Techember Fest &apos;25
                   </p>
 
-                  <div className="  items-center relative  left-2 rounded-[20px]">
+                  <div className="hidden md:block  items-center relative  md:left-2 rig rounded-[20px]">
                     {profileImage && profileImage !== "" && (
                       <Image
                         src={profileImage}
-                        alt="event logo"
+                        alt="profile"
                         width={40}
                         height={40}
                         className="rounded-[10px]"
@@ -136,7 +148,7 @@ const TicketConfirmation = () => {
 
           {/* Side Ticket */}
           <div className="bg-[#0E464F] text-white text-sm flex items-center rounded-r-[20px] border-l-2 w-full ">
-            <div className=" -rotate-90 text-[12px] w-full ">
+            <div className=" md:-rotate-90 text-[12px] w-full ">
               <p> Techember Fest &apos;25</p>
               <p className="mt-2 text-[10px] font-bold">User Name: {name}</p>
 
@@ -145,7 +157,7 @@ const TicketConfirmation = () => {
                 alt="Event logo"
                 width={24}
                 height={24}
-                className="relative right-10 bottom-10 "
+                className="relative md:right-10 md:bottom-10 "
               />
             </div>
             <div>
@@ -154,7 +166,7 @@ const TicketConfirmation = () => {
                 alt="Decoration"
                 width={12}
                 height={24}
-                className="relative right-5"
+                className="relative md:right-5 right-2"
               />
             </div>
           </div>

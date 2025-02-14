@@ -127,7 +127,7 @@ const Details = () => {
           <p>Upload Profile Photo</p>
         </div>
         <div className="bg-[#02191D] px-5 my-5 h-[150px]">
-          <div className="bg-[#0E464F] rounded-[16px] p-6 flex justify-center items-center text-center cursor-pointer w-[40%] h-[150px] mx-auto" aria-label="Profile photo upload">
+          <div className="bg-[#0E464F] rounded-[16px] p-6 flex justify-center items-center text-center cursor-pointer w-[55%] md:w-[40%] h-[150px] mx-auto" aria-label="Profile photo upload">
             {imagePreview ? (
               <>
                 <img
